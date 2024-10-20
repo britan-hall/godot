@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cnxcbn4a6t3p0"
+path="res://.godot/imported/Morse Code Sound Effect [HD].mp3-cd130907bc7acb073b2083f14356afb3.mp3str"
+
+[deps]
+
+source_file="res://scenes/enemies/seagull/Morse Code Sound Effect [HD].mp3"
+dest_files=["res://.godot/imported/Morse Code Sound Effect [HD].mp3-cd130907bc7acb073b2083f14356afb3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,140 @@
+[gd_scene load_steps=15 format=3 uid="uid://mkfqrm438dw1"]
+
+[ext_resource type="Script" path="res://scenes/enemies/seagull/seagull.gd" id="1_ftxqo"]
+[ext_resource type="Resource" uid="uid://56om27nhd85w" path="res://resources/player_stats.tres" id="2_yab0u"]
+[ext_resource type="Texture2D" uid="uid://bkp3tumpdkxeq" path="res://scenes/enemies/seagull/seagull_sprite.png" id="3_jpumt"]
+[ext_resource type="PackedScene" uid="uid://2hxiac27cos1" path="res://scenes/enemies/components/sprite_orienter.tscn" id="4_ced8g"]
+[ext_resource type="AudioStream" uid="uid://d5m2xwvhmi6o" path="res://audio/seagull_squawk.mp3" id="4_dacc2"]
+[ext_resource type="PackedScene" uid="uid://spfhp68ent5f" path="res://scenes/enemies/components/enemy_hitbox_component.tscn" id="5_73l0m"]
+[ext_resource type="PackedScene" uid="uid://cburkdu41qauk" path="res://animations/dance_player.tscn" id="7_mtvfs"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oaswq"]
+radius = 6.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lc353"]
+radius = 101.005
+
+[sub_resource type="Animation" id="Animation_5ehbw"]
+resource_name = "RESET"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SeagullImage:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_yobeu"]
+resource_name = "bird_hop"
+length = 0.1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SeagullImage:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -500), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_b65l3"]
+resource_name = "detect"
+length = 2.0
+step = 0.05
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Squawk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.1714,
+"stream": ExtResource("4_dacc2")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SeagullImage:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sjvxj"]
+_data = {
+"RESET": SubResource("Animation_5ehbw"),
+"bird_hop": SubResource("Animation_yobeu"),
+"detect": SubResource("Animation_b65l3")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tmxpi"]
+radius = 5.09902
+
+[node name="Seagull" type="CharacterBody2D" groups=["enemy", "seagull"]]
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_ftxqo")
+player_stats = ExtResource("2_yab0u")
+
+[node name="SeagullImage" type="Sprite2D" parent="."]
+scale = Vector2(0.017, 0.017)
+texture = ExtResource("3_jpumt")
+flip_h = true
+region_rect = Rect2(4.81653, 15.2998, 1164.07, 1168.7)
+
+[node name="SeagullCollider" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_oaswq")
+disabled = true
+
+[node name="DetectArea" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 9
+
+[node name="DetectCollider" type="CollisionShape2D" parent="DetectArea"]
+shape = SubResource("CircleShape2D_lc353")
+
+[node name="HopTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_sjvxj")
+}
+
+[node name="SpriteOrienter" parent="." instance=ExtResource("4_ced8g")]
+
+[node name="EnemyHitboxComponent" parent="." instance=ExtResource("5_73l0m")]
+damage_rate = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyHitboxComponent"]
+shape = SubResource("CircleShape2D_tmxpi")
+
+[node name="Squawk" type="AudioStreamPlayer2D" parent="."]
+
+[node name="DancePlayer" parent="." instance=ExtResource("7_mtvfs")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[connection signal="area_entered" from="DetectArea" to="." method="_on_detect_area_area_entered"]
+[connection signal="area_exited" from="DetectArea" to="." method="_on_detect_area_area_exited"]
+[connection signal="body_entered" from="DetectArea" to="." method="_on_detect_area_body_entered"]
+[connection signal="body_exited" from="DetectArea" to="." method="_on_detect_area_body_exited"]
+[connection signal="timeout" from="HopTimer" to="." method="_on_hop_timer_timeout"]

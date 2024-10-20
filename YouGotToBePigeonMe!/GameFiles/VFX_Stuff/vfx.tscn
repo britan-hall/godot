@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3 uid="uid://bx3imi2gq2ldl"]
+
+[ext_resource type="Shader" path="res://VFX_Stuff/new_shader.gdshader" id="1_el7mo"]
+[ext_resource type="Texture2D" uid="uid://m5logargyfpi" path="res://VFX_Stuff/new_noise_texture_2d.tres" id="2_2hhbb"]
+[ext_resource type="Texture2D" uid="uid://bba24imwcqw6x" path="res://icon.svg" id="3_shflx"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ughlx"]
+frequency = 0.018
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_gf5hg"]
+seamless = true
+noise = SubResource("FastNoiseLite_ughlx")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m3vbf"]
+shader = ExtResource("1_el7mo")
+shader_parameter/scroll1 = Vector2(0.15, -0.05)
+shader_parameter/scroll2 = Vector2(-0.05, 0.15)
+shader_parameter/distortion_strength = 4.75e-08
+shader_parameter/tone_color = Color(1, 1, 1, 0)
+shader_parameter/top_color = Color(1, 1, 1, 1)
+shader_parameter/light_start = 0.345
+shader_parameter/light_end = 0.936
+shader_parameter/noise1 = ExtResource("2_2hhbb")
+shader_parameter/noise2 = SubResource("NoiseTexture2D_gf5hg")
+
+[node name="VFX" type="Sprite2D"]
+material = SubResource("ShaderMaterial_m3vbf")
+position = Vector2(245, 144.5)
+scale = Vector2(5.125, 3.24219)
+texture = ExtResource("3_shflx")

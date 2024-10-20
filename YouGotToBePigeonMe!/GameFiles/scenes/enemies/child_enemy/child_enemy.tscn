@@ -1,0 +1,67 @@
+[gd_scene load_steps=10 format=3 uid="uid://mdopbnrtajdc"]
+
+[ext_resource type="Texture2D" uid="uid://ccchiqum4de2x" path="res://scenes/enemies/child_enemy/main.png" id="1_8emnr"]
+[ext_resource type="Script" path="res://scenes/enemies/child_enemy/child_enemy.gd" id="1_wrljx"]
+[ext_resource type="PackedScene" uid="uid://spfhp68ent5f" path="res://scenes/enemies/components/enemy_hitbox_component.tscn" id="3_fjelb"]
+[ext_resource type="PackedScene" uid="uid://2hxiac27cos1" path="res://scenes/enemies/components/sprite_orienter.tscn" id="4_l2b3w"]
+[ext_resource type="AudioStream" uid="uid://dq8la5aimui83" path="res://audio/Kid Laugh Sound.mp3" id="5_q6fl0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sbyyl"]
+radius = 69.029
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6qkjq"]
+radius = 58.0775
+
+[sub_resource type="Animation" id="Animation_d2h22"]
+resource_name = "fall_over"
+length = 4.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"resume_running"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mepgb"]
+_data = {
+"fall_over": SubResource("Animation_d2h22")
+}
+
+[node name="ChildEnemy" type="CharacterBody2D" groups=["child", "enemy"]]
+collision_layer = 2
+collision_mask = 4
+velocity = Vector2(-0.719107, 0.694899)
+script = ExtResource("1_wrljx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_8emnr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_sbyyl")
+
+[node name="EnemyHitboxComponent" parent="." instance=ExtResource("3_fjelb")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyHitboxComponent"]
+shape = SubResource("CircleShape2D_6qkjq")
+
+[node name="SpriteOrienter" parent="." instance=ExtResource("4_l2b3w")]
+
+[node name="FallOverTimer" type="Timer" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_mepgb")
+}
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_q6fl0")
+
+[connection signal="timeout" from="FallOverTimer" to="." method="_on_fall_over_timer_timeout"]

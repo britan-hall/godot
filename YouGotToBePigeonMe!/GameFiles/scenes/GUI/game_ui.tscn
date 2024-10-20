@@ -1,0 +1,170 @@
+[gd_scene load_steps=12 format=3 uid="uid://bf0yusii3k8qo"]
+
+[ext_resource type="Script" path="res://scenes/GUI/LunchRemainingPBar.gd" id="1_b0qxd"]
+[ext_resource type="Script" path="res://scenes/GUI/LunchEatenNumber.gd" id="1_dw835"]
+[ext_resource type="Resource" uid="uid://56om27nhd85w" path="res://resources/player_stats.tres" id="2_m6raa"]
+[ext_resource type="Script" path="res://scenes/GUI/LunchEatenProgressBar.gd" id="3_076jx"]
+[ext_resource type="Texture2D" uid="uid://dcunm012j5r8" path="res://graphics/Circle_double_border_black_filling_white.svg.png" id="4_e1a61"]
+[ext_resource type="Script" path="res://scenes/GUI/DashBar.gd" id="6_o7e4m"]
+[ext_resource type="StyleBox" uid="uid://xft7qlcfgp35" path="res://themes/new_style_box_flat.tres" id="6_otg14"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_n41cw"]
+font_size = 32
+
+[sub_resource type="Theme" id="Theme_vih6p"]
+default_font_size = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uuwlp"]
+bg_color = Color(0.670588, 0.85098, 1, 1)
+skew = Vector2(1, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8ib5l"]
+font_size = 25
+font_color = Color(0.913725, 0.913725, 0.913725, 1)
+shadow_color = Color(0.262745, 0.262745, 0.262745, 1)
+
+[node name="GameUI" type="CanvasLayer"]
+
+[node name="LunchRemainingPBar" type="ProgressBar" parent="."]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -439.0
+offset_top = -77.0
+offset_right = 440.0
+offset_bottom = -26.0
+grow_horizontal = 2
+grow_vertical = 0
+value = 33.0
+show_percentage = false
+script = ExtResource("1_b0qxd")
+stats = ExtResource("2_m6raa")
+metadata/_edit_group_ = true
+
+[node name="LunchRemainingLabel" type="Label" parent="LunchRemainingPBar"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Lunch Remaining"
+label_settings = SubResource("LabelSettings_n41cw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LunchEatenProgressBar" type="VBoxContainer" parent="."]
+offset_left = 36.0
+offset_top = 35.0
+offset_right = 201.0
+offset_bottom = 236.0
+theme = SubResource("Theme_vih6p")
+script = ExtResource("3_076jx")
+stats = ExtResource("2_m6raa")
+
+[node name="LunchEatenLabel" type="Label" parent="LunchEatenProgressBar"]
+layout_mode = 2
+text = "Lunch Eaten
+
+"
+label_settings = SubResource("LabelSettings_n41cw")
+horizontal_alignment = 1
+
+[node name="RedCircleUnderlay" type="TextureRect" parent="LunchEatenProgressBar"]
+self_modulate = Color(1, 0.0470588, 0.0470588, 1)
+layout_mode = 2
+texture = ExtResource("4_e1a61")
+
+[node name="RemainingUnderlay" type="TextureProgressBar" parent="LunchEatenProgressBar/RedCircleUnderlay"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -82.5
+offset_top = -82.5
+offset_right = 82.5
+offset_bottom = 82.5
+grow_horizontal = 2
+grow_vertical = 2
+value = 90.0
+fill_mode = 4
+texture_progress = ExtResource("4_e1a61")
+tint_progress = Color(0.854902, 0.854902, 0.854902, 1)
+
+[node name="EatenProgressBar" type="TextureProgressBar" parent="LunchEatenProgressBar/RedCircleUnderlay"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -82.5
+offset_top = -82.5
+offset_right = 82.5
+offset_bottom = 82.5
+grow_horizontal = 2
+grow_vertical = 2
+value = 33.0
+fill_mode = 4
+texture_progress = ExtResource("4_e1a61")
+tint_progress = Color(0, 1, 0.176471, 1)
+
+[node name="LunchEatenNumber" type="Label" parent="LunchEatenProgressBar/RedCircleUnderlay"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -17.0
+offset_top = -16.0
+offset_right = 17.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "0%
+"
+label_settings = SubResource("LabelSettings_n41cw")
+script = ExtResource("1_dw835")
+stats = ExtResource("2_m6raa")
+
+[node name="DashBar" type="ProgressBar" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -346.0
+offset_top = 20.0
+offset_right = -24.0
+offset_bottom = 49.0
+grow_horizontal = 0
+theme_override_styles/background = ExtResource("6_otg14")
+theme_override_styles/fill = SubResource("StyleBoxFlat_uuwlp")
+max_value = 2.0
+value = 0.93
+show_percentage = false
+script = ExtResource("6_o7e4m")
+stats = ExtResource("2_m6raa")
+
+[node name="Timer" type="Timer" parent="DashBar"]
+wait_time = 2.0
+one_shot = true
+
+[node name="Label" type="Label" parent="DashBar"]
+layout_mode = 1
+offset_left = -11.0
+offset_top = 32.0
+offset_right = 207.0
+offset_bottom = 80.0
+text = "PRESS SPACE TO DASH"
+label_settings = SubResource("LabelSettings_8ib5l")
+horizontal_alignment = 2
+vertical_alignment = 1
+uppercase = true

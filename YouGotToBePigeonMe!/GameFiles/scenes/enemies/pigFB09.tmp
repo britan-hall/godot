@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=3 uid="uid://dit5w5w4jygsn"]
+
+[ext_resource type="Texture2D" uid="uid://3jmw8j03fhjf" path="res://scenes/enemies/pigeon.png" id="1_8f0p4"]
+[ext_resource type="Script" path="res://scenes/enemies/pigeon.gd" id="1_ybx6o"]
+[ext_resource type="Resource" uid="uid://56om27nhd85w" path="res://resources/player_stats.tres" id="2_alw6l"]
+[ext_resource type="PackedScene" uid="uid://2hxiac27cos1" path="res://scenes/enemies/components/sprite_orienter.tscn" id="4_bhp16"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_twe53"]
+
+[sub_resource type="Animation" id="Animation_qq7np"]
+resource_name = "bird_hop"
+length = 0.1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PigeonImage:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -100), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vkj5f"]
+_data = {
+"bird_hop": SubResource("Animation_qq7np")
+}
+
+[node name="Pigeon" type="Area2D"]
+script = ExtResource("1_ybx6o")
+player_stats = ExtResource("2_alw6l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_twe53")
+
+[node name="PigeonImage" type="Sprite2D" parent="."]
+position = Vector2(2.595, 0)
+scale = Vector2(0.0430528, 0.0430529)
+texture = ExtResource("1_8f0p4")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+avoidance_enabled = true
+radius = 100.0
+
+[node name="HopTimer" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_vkj5f")
+}
+
+[node name="SpriteOrienter" parent="." instance=ExtResource("4_bhp16")]
+
+[connection signal="navigation_finished" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_navigation_finished"]
+[connection signal="path_changed" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_path_changed"]
+[connection signal="timeout" from="HopTimer" to="." method="_on_timer_timeout"]

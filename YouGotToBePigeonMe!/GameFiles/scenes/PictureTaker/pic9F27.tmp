@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://o4h0mxrrv31"]
+
+[ext_resource type="Script" path="res://scenes/PictureTaker/picture_taker.gd" id="1_t4457"]
+
+[node name="PictureTaker" type="Area2D"]
+script = ExtResource("1_t4457")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, -10, 70, -70, 70, 70, 0, 10)
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+modulate = Color(1, 1, 1, 0.207843)
+polygon = PackedVector2Array(0, -10, 70, -70, 70, 70, 0, 10)

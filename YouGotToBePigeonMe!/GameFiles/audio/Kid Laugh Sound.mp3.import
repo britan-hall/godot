@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dq8la5aimui83"
+path="res://.godot/imported/Kid Laugh Sound.mp3-aae46e7947464b8196f9376e3d98eec6.mp3str"
+
+[deps]
+
+source_file="res://audio/Kid Laugh Sound.mp3"
+dest_files=["res://.godot/imported/Kid Laugh Sound.mp3-aae46e7947464b8196f9376e3d98eec6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cnx1tiuspuauf"
+path="res://.godot/imported/people screaming - sound effect.mp3-50e445612c2b32dfbe5a2d7823b4866e.mp3str"
+
+[deps]
+
+source_file="res://audio/people screaming - sound effect.mp3"
+dest_files=["res://.godot/imported/people screaming - sound effect.mp3-50e445612c2b32dfbe5a2d7823b4866e.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

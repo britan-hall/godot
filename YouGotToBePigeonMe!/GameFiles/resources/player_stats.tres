@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="PlayerStats" load_steps=2 format=3 uid="uid://56om27nhd85w"]
+
+[ext_resource type="Script" path="res://resources/player_stats.gd" id="1_65o7a"]
+
+[resource]
+script = ExtResource("1_65o7a")
+player_pos = Vector2(0, 0)
+player_facing = Vector2(0, 0)

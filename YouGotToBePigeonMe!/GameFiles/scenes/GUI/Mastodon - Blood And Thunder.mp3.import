@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://s4svbs130svn"
+path="res://.godot/imported/Mastodon - Blood And Thunder.mp3-bcb6ba2a0c7135c150b8f8c9520ce192.mp3str"
+
+[deps]
+
+source_file="res://scenes/GUI/Mastodon - Blood And Thunder.mp3"
+dest_files=["res://.godot/imported/Mastodon - Blood And Thunder.mp3-bcb6ba2a0c7135c150b8f8c9520ce192.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsubgwle1qnp0"]
+
+[ext_resource type="Script" path="res://scenes/crumbs/crumb_thrower.gd" id="1_i50v3"]
+[ext_resource type="PackedScene" uid="uid://bw0badpfeebre" path="res://scenes/crumbs/crumbs.tscn" id="2_tv5h3"]
+
+[node name="CrumbThrower" type="Node2D"]
+script = ExtResource("1_i50v3")
+crumb_scene = ExtResource("2_tv5h3")

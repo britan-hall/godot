@@ -1,0 +1,72 @@
+[gd_scene load_steps=14 format=3 uid="uid://dit5w5w4jygsn"]
+
+[ext_resource type="Texture2D" uid="uid://3jmw8j03fhjf" path="res://scenes/enemies/pigeon/pigeon.png" id="1_8f0p4"]
+[ext_resource type="Script" path="res://scenes/enemies/pigeon/pigeon.gd" id="1_ybx6o"]
+[ext_resource type="Resource" uid="uid://56om27nhd85w" path="res://resources/player_stats.tres" id="2_alw6l"]
+[ext_resource type="PackedScene" uid="uid://2hxiac27cos1" path="res://scenes/enemies/components/sprite_orienter.tscn" id="4_5j108"]
+[ext_resource type="Animation" uid="uid://dcboc7bu76n2j" path="res://animations/bird_hop.res" id="4_nrjr0"]
+[ext_resource type="Animation" uid="uid://cmf1fja8akfbv" path="res://animations/Pigeon_dance.res" id="5_ef54c"]
+[ext_resource type="PackedScene" uid="uid://spfhp68ent5f" path="res://scenes/enemies/components/enemy_hitbox_component.tscn" id="5_lku6k"]
+[ext_resource type="AudioStream" uid="uid://cbcqn28bcfq2q" path="res://audio/pigeon_flap.mp3" id="6_1rs03"]
+[ext_resource type="PackedScene" uid="uid://cburkdu41qauk" path="res://animations/dance_player.tscn" id="9_f2ihi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_twe53"]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vkj5f"]
+_data = {
+"bird_hop": ExtResource("4_nrjr0")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i3xhj"]
+radius = 7.0
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gl1tb"]
+_data = {
+"dance": ExtResource("5_ef54c")
+}
+
+[node name="Pigeon" type="CharacterBody2D" groups=["enemy", "pigeon"]]
+collision_layer = 2
+script = ExtResource("1_ybx6o")
+player_stats = ExtResource("2_alw6l")
+detect_player_radius = 300
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_twe53")
+disabled = true
+
+[node name="PigeonImage" type="Sprite2D" parent="."]
+scale = Vector2(0.0430528, 0.0430529)
+texture = ExtResource("1_8f0p4")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+avoidance_enabled = true
+radius = 100.0
+
+[node name="HopTimer" type="Timer" parent="."]
+wait_time = 0.44544
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_vkj5f")
+}
+
+[node name="SpriteOrienter" parent="." instance=ExtResource("4_5j108")]
+
+[node name="EnemyHitboxComponent" parent="." instance=ExtResource("5_lku6k")]
+damage_rate = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyHitboxComponent"]
+shape = SubResource("CircleShape2D_i3xhj")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_1rs03")
+volume_db = 5.2
+
+[node name="DancePlayer" parent="." instance=ExtResource("9_f2ihi")]
+libraries = {
+"": SubResource("AnimationLibrary_gl1tb")
+}
+
+[connection signal="navigation_finished" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_navigation_finished"]
+[connection signal="timeout" from="HopTimer" to="." method="_on_timer_timeout"]

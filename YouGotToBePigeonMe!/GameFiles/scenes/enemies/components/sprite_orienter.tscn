@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://2hxiac27cos1"]
+
+[ext_resource type="Script" path="res://scenes/enemies/components/sprite_orienter.gd" id="1_7t2ps"]
+
+[node name="SpriteOrienter" type="Node"]
+script = ExtResource("1_7t2ps")
