@@ -1,0 +1,163 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1729442749
+1001_metal-button-01.mp3::AudioStreamMP3::51597360217558104::1706967817::1729257202::1::::<><>::
+crossing countdown.res::Animation::2052527834745004855::1706967817::0::1::::<><>::
+icon.svg::CompressedTexture2D::2458301113886431469::1706967817::1729257204::1::::<><>::
+tutorial.png::CompressedTexture2D::1227283263472512297::1706967817::1729442750::1::::<><>::
+::res://animations/::1706967817
+bird_hop.res::Animation::7302559408840682635::1706967817::0::1::::<><>::
+dance.res::Animation::421058988626079248::1706967817::0::1::::<><>::
+dance_player.tscn::PackedScene::4885368002740649202::1706967817::0::1::::<><>::uid://f871rydy65uy::::res://animations/dance.res<>res://scenes/enemies/DanceScript.gd<>uid://cw20gxwmi8jhx::::res://resources/album.tres
+Pigeon_dance.res::Animation::5627017424804261307::1706967817::0::1::::<><>::
+Seagull_dance.res::Animation::1277119196746460271::1706967817::0::1::::<><>::
+::res://audio/::1729257203
+(short) Yippee sound effect!!.mp3::AudioStreamMP3::8765230782597780697::1706967817::1729257202::1::::<><>::
+Dove laughing and cooing..mp3::AudioStreamMP3::5410958777973870747::1706967817::1729257203::1::::<><>::
+Kid Laugh Sound.mp3::AudioStreamMP3::8351077478173045246::1706967817::1729257203::1::::<><>::
+Mastodon - Blood And Thunder.mp3::AudioStreamMP3::4501601436264550843::1706967817::1729257203::1::::<><>::
+people screaming - sound effect.mp3::AudioStreamMP3::5734390046841677949::1706967817::1729257203::1::::<><>::
+pigeon_flap.mp3::AudioStreamMP3::4848155122894704782::1706967817::1729257203::1::::<><>::
+Seagull - Sound Effect.mp3::AudioStreamMP3::3784640251012841820::1706967817::1729257203::1::::<><>::
+seagull_squawk.mp3::AudioStreamMP3::273275926871250876::1706967817::1729257203::1::::<><>::
+Silver Gull.mp3::AudioStreamMP3::5974759495830899447::1706967817::1729257203::1::::<><>::
+::res://autoloads/::1706967817
+global_signals.gd::GDScript::-1::1706967817::0::1::::<>Node<>::
+global_signals.tscn::PackedScene::7189898105689415324::1706967817::0::1::::<><>::res://autoloads/global_signals.gd
+::res://graphics/::1729442748
+1x1-ffffffff.png::CompressedTexture2D::8433192517845409252::1706967817::1729257205::1::::<><>::
+256x256.png::CompressedTexture2D::3423051610619523961::1706967817::1729257205::1::::<><>::
+black_circle_scribble.png::CompressedTexture2D::7400655796944311736::1706967817::1729257206::1::::<><>::
+Circle_double_border_black_filling_white.svg.png::CompressedTexture2D::215933511716412883::1706967817::1729257206::1::::<><>::
+dripping_blood.png::CompressedTexture2D::5033176270241820301::1706967817::1729257206::1::::<><>::
+pixel-pigeon-vector-isolated-cute-223987582.webp::CompressedTexture2D::7018191141350048017::1706967817::1729257206::1::::<><>::
+red-light-lens-flare-free-png.png::CompressedTexture2D::488010672491689178::1706967817::1729257208::1::::<><>::
+scribbly_circle.png::CompressedTexture2D::1096983807027240085::1706967817::1729257206::1::::<><>::
+::res://graphics/tilemaps/::1706967817
+::res://graphics/tilemaps/basic/::1729257205
+TX Plant.png::CompressedTexture2D::5985882763307998954::1706967817::1729257205::1::::<><>::
+TX Player.png::CompressedTexture2D::5392731374849946645::1706967817::1729257205::1::::<><>::
+TX Props.png::CompressedTexture2D::7966091766396788420::1706967817::1729257205::1::::<><>::
+TX Shadow Plant.png::CompressedTexture2D::6904481269118931172::1706967817::1729257205::1::::<><>::
+TX Shadow.png::CompressedTexture2D::3960524995112339199::1706967817::1729257205::1::::<><>::
+TX Struct.png::CompressedTexture2D::8740126561043020094::1706967817::1729257205::1::::<><>::
+TX Tileset Grass.png::CompressedTexture2D::2475972046531741451::1706967817::1729257205::1::::<><>::
+TX Tileset Stone Ground.png::CompressedTexture2D::7486397214390586430::1706967817::1729257205::1::::<><>::
+TX Tileset Wall.png::CompressedTexture2D::1518247474399582700::1706967817::1729257205::1::::<><>::
+::res://graphics/tilemaps/city/::1729442586
+buildings.png::CompressedTexture2D::5809167533492597372::1706967817::1729257205::1::::<><>::
+city.tres::TileSet::5418434907882074661::1729442586::0::1::::<><>::uid://boh25oyc2l5oq::::res://graphics/tilemaps/city/vehicles.png<>uid://cpj6wbhjdrtg4::::res://graphics/tilemaps/city/street_corner.png<>uid://co1ae1qbrqke3::::res://graphics/tilemaps/city/buildings.png<>uid://defu8rmya3je3::::res://graphics/tilemaps/city/fences.png<>uid://o2uk2yldem3g::::res://graphics/tilemaps/city/street.png<>uid://bvk2xbsqueotc::::res://graphics/tilemaps/city/corner_grass_tile.png
+corner_grass_tile.png::CompressedTexture2D::3882710690780583200::1706967817::1729257205::1::::<><>::
+fences.png::CompressedTexture2D::7451613497982089128::1706967817::1729257205::1::::<><>::
+street.png::CompressedTexture2D::1039615663796176158::1706967817::1729257205::1::::<><>::
+street_corner.png::CompressedTexture2D::5846174999735493197::1706967817::1729257205::1::::<><>::
+vehicles.png::CompressedTexture2D::3385208844055441708::1706967817::1729257205::1::::<><>::
+::res://resources/::1706967817
+album.gd::GDScript::-1::1706967817::0::1::::Album<>Resource<>::
+album.tres::Resource/Album::6374264008945093425::1706967817::0::1::::<><>::res://resources/album.gd
+player_stats.gd::GDScript::-1::1706967817::0::1::::PlayerStats<>Resource<>::
+player_stats.tres::Resource/PlayerStats::2170533955106780990::1706967817::0::1::::<><>::res://resources/player_stats.gd
+::res://scenes/::1729257204
+pigeon.png::CompressedTexture2D::8303166747180049350::1706967817::1729257204::1::::<><>::
+tutorial_text.png::CompressedTexture2D::8607305598080339769::1706967817::1729257204::1::::<><>::
+::res://scenes/crumbs/::1729257206
+crumbs.gd::GDScript::-1::1706967817::0::1::::<>Area2D<>::
+crumbs.tscn::PackedScene::3982245585548872458::1706967817::0::1::::<><>::res://scenes/crumbs/crumbs.gd<>uid://ced1sbcksdld0::::res://scenes/crumbs/crumbs_sprite.png
+crumbsblurry2.png::CompressedTexture2D::550398168664684715::1706967817::1729257206::1::::<><>::
+crumbsblurry.png::CompressedTexture2D::1229612132876219900::1706967817::1729257206::1::::<><>::
+crumbs_sprite.png::CompressedTexture2D::5061400717394225187::1706967817::1729257206::1::::<><>::
+crumb_thrower.gd::GDScript::-1::1706967817::0::1::::<>Node2D<>::
+crumb_thrower.tscn::PackedScene::8464021396124960043::1706967817::0::1::::<><>::res://scenes/crumbs/crumb_thrower.gd<>uid://bw0badpfeebre::::res://scenes/crumbs/crumbs.tscn
+::res://scenes/enemies/::1706967817
+DanceScript.gd::GDScript::-1::1706967817::0::1::::<>AnimationPlayer<>::
+enemy_base.tscn::PackedScene::2087563317568237300::1706967817::0::1::::<><>::
+::res://scenes/enemies/child_enemy/::1729257206
+child_enemy.gd::GDScript::-1::1706967817::0::1::::<>CharacterBody2D<>::
+child_enemy.tscn::PackedScene::849336155129482524::1706967817::0::1::::<><>::uid://ccchiqum4de2x::::res://scenes/enemies/child_enemy/main.png<>res://scenes/enemies/child_enemy/child_enemy.gd<>uid://spfhp68ent5f::::res://scenes/enemies/components/enemy_hitbox_component.tscn<>uid://2hxiac27cos1::::res://scenes/enemies/components/sprite_orienter.tscn<>uid://dq8la5aimui83::::res://audio/Kid Laugh Sound.mp3
+main.png::CompressedTexture2D::4917787987324783781::1706967817::1729257206::1::::<><>::
+::res://scenes/enemies/components/::1706967817
+enemy_hitbox_component.gd::GDScript::-1::1706967817::0::1::::<>Area2D<>::
+enemy_hitbox_component.tscn::PackedScene::1294681774561083477::1706967817::0::1::::<><>::res://scenes/enemies/components/enemy_hitbox_component.gd
+sprite_orienter.gd::GDScript::-1::1706967817::0::1::::<>Node<>::
+sprite_orienter.tscn::PackedScene::1910960204049384102::1706967817::0::1::::<><>::res://scenes/enemies/components/sprite_orienter.gd
+::res://scenes/enemies/pigeon/::1729257207
+pigeon.gd::GDScript::-1::1706967817::0::1::::<>CharacterBody2D<>::
+pigeon.png::CompressedTexture2D::1984636661377852443::1706967817::1729257206::1::::<><>::
+pigeon.tscn::PackedScene::7761858385776406265::1706967817::0::1::::<><>::uid://3jmw8j03fhjf::::res://scenes/enemies/pigeon/pigeon.png<>res://scenes/enemies/pigeon/pigeon.gd<>uid://56om27nhd85w::::res://resources/player_stats.tres<>uid://2hxiac27cos1::::res://scenes/enemies/components/sprite_orienter.tscn<>uid://dcboc7bu76n2j::::res://animations/bird_hop.res<>uid://cmf1fja8akfbv::::res://animations/Pigeon_dance.res<>uid://spfhp68ent5f::::res://scenes/enemies/components/enemy_hitbox_component.tscn<>uid://cbcqn28bcfq2q::::res://audio/pigeon_flap.mp3<>uid://cburkdu41qauk::::res://animations/dance_player.tscn
+::res://scenes/enemies/seagull/::1729257207
+Morse Code Sound Effect [HD].mp3::AudioStreamMP3::5732900970448521807::1706967817::1729257202::1::::<><>::
+seagull.gd::GDScript::-1::1706967817::0::1::::<>CharacterBody2D<>::
+seagull.tscn::PackedScene::863242971654248442::1706967817::0::1::::<><>::res://scenes/enemies/seagull/seagull.gd<>uid://56om27nhd85w::::res://resources/player_stats.tres<>uid://bkp3tumpdkxeq::::res://scenes/enemies/seagull/seagull_sprite.png<>uid://2hxiac27cos1::::res://scenes/enemies/components/sprite_orienter.tscn<>uid://d5m2xwvhmi6o::::res://audio/seagull_squawk.mp3<>uid://spfhp68ent5f::::res://scenes/enemies/components/enemy_hitbox_component.tscn<>uid://cburkdu41qauk::::res://animations/dance_player.tscn
+seagull_sprite.png::CompressedTexture2D::3121009861956591572::1706967817::1729257207::1::::<><>::
+::res://scenes/GUI/::1729442749
+_101232673_angry.jpg::CompressedTexture2D::1857534997790762911::1706967817::1729257204::1::::<><>::
+Bird Crime.gd::GDScript::-1::1706967817::0::1::::<>Label<>::
+Crossing Signal.mp3::AudioStreamMP3::5047075495996907696::1706967817::1729257202::1::::<><>::
+DashBar.gd::GDScript::-1::1706967817::0::1::::<>ProgressBar<>::
+game_over_screen.gd::GDScript::-1::1706967817::0::1::::<>CanvasLayer<>::
+game_over_screen.tscn::PackedScene::4306166182569835535::1706967817::0::1::::<><>::res://scenes/GUI/game_over_screen.gd<>uid://56om27nhd85w::::res://resources/player_stats.tres<>uid://crw3lauau5bvi::::res://scenes/GUI/letter_grades/pngtree-ranking-of-values-png-image_7119408.png<>res://scenes/GUI/RestartButton.gd<>uid://cw20gxwmi8jhx::::res://resources/album.tres<>res://scenes/GUI/MainMenuButton.gd<>uid://cpg8bm1haiuxn::::res://scenes/GUI/letter_grades/1763_button-click-05.mp3<>uid://dc63vcbgsal2::::res://scenes/GUI/letter_grades/1001_metal-button-01.mp3<>res://scenes/GUI/letter_grades/random_nums.res<>uid://y82h65f7g4w::::res://1001_metal-button-01.mp3<>uid://dw47cnl7frjtx::::res://audio/(short) Yippee sound effect!!.mp3
+game_ui.tscn::PackedScene::2790468227619320898::1706967817::0::1::::<><>::res://scenes/GUI/LunchRemainingPBar.gd<>res://scenes/GUI/LunchEatenNumber.gd<>uid://56om27nhd85w::::res://resources/player_stats.tres<>res://scenes/GUI/LunchEatenProgressBar.gd<>uid://dcunm012j5r8::::res://graphics/Circle_double_border_black_filling_white.svg.png<>res://scenes/GUI/DashBar.gd<>uid://xft7qlcfgp35::::res://themes/new_style_box_flat.tres
+LunchEatenNumber.gd::GDScript::-1::1706967817::0::1::::<>Label<>::
+LunchEatenProgressBar.gd::GDScript::-1::1706967817::0::1::::<>VBoxContainer<>::
+LunchRemainingPBar.gd::GDScript::-1::1706967817::0::1::::<>ProgressBar<>::
+MainMenuButton.gd::GDScript::-1::1706967817::0::1::::<>Button<>::
+main_menu.gd::GDScript::-1::1706967817::0::1::::<>Control<>::
+main_menu.tscn::PackedScene::3466177641787812159::1729442616::0::1::::<><>::uid://4b6sb0whmuk5::::res://scenes/GUI/main_skin/False 3d.ttf<>res://scenes/GUI/main_menu.gd<>uid://cnp7n1pk0kyhw::::res://scenes/levels/18756869098_92ca86ff79_b.jpg<>res://scenes/GUI/Bird Crime.gd<>uid://1p2lhrjop3lb::::res://scenes/GUI/_101232673_angry.jpg<>res://scenes/GUI/StartButton.gd<>uid://bt6kqbve81uwa::::res://audio/Seagull - Sound Effect.mp3<>uid://cnx1tiuspuauf::::res://audio/people screaming - sound effect.mp3<>uid://cjddx22ld3lyp::::res://audio/Dove laughing and cooing..mp3<>res://scenes/GUI/QuitButton.gd
+Mastodon - Blood And Thunder.mp3::AudioStreamMP3::1324396629443687783::1706967817::1729257202::1::::<><>::
+Pedestrian Crossing Beep.mp3::AudioStreamMP3::4406595287272222565::1706967817::1729257202::1::::<><>::
+QuitButton.gd::GDScript::-1::1706967817::0::1::::<>Button<>::
+RestartButton.gd::GDScript::-1::1706967817::0::1::::<>Button<>::
+StartButton.gd::GDScript::-1::1706967817::0::1::::<>Button<>::
+tutorial_screen.gd::GDScript::-1::1706967817::0::1::::<>CanvasLayer<>::
+tutorial_screen.tscn::PackedScene::8488875665710859562::1729442749::0::1::::<><>::res://scenes/GUI/tutorial_screen.gd<>uid://bjonrryl3ylam::::res://scenes/GUI/walk_signs.png<>uid://4ii3luiqh8wp::::res://crossing countdown.res<>uid://rqrf8reamg06::::res://tutorial.png<>uid://d2xx1aefeb0ql::::res://scenes/GUI/main_skin/Rectangle-New-Resize-copy-e1597367317576.png<>uid://cd53ujapfwxsq::::res://scenes/GUI/Crossing Signal.mp3<>uid://b31t8lskwd4bx::::res://scenes/GUI/Pedestrian Crossing Beep.mp3
+tutorial_text.png::CompressedTexture2D::3356393880990569678::1706967817::1729257203::1::::<><>::
+walk_signs.png::CompressedTexture2D::3047842174904998168::1706967817::1729257203::1::::<><>::
+::res://scenes/GUI/letter_grades/::1729257207
+1001_metal-button-01.mp3::AudioStreamMP3::216628621561437345::1706967817::1729257202::1::::<><>::
+1763_button-click-05.mp3::AudioStreamMP3::5840066405799747595::1706967817::1729257202::1::::<><>::
+pngtree-ranking-of-values-png-image_7119408.png::CompressedTexture2D::6013187770276478598::1706967817::1729257207::1::::<><>::
+random_nums.res::Animation::7755635876108879419::1706967817::0::1::::<><>::
+s_rank.png::CompressedTexture2D::4564509974299276926::1706967817::1729257207::1::::<><>::
+::res://scenes/GUI/main_skin/::1729257204
+1x1-ffffffff.png::CompressedTexture2D::3211882856029176859::1706967817::1729257204::1::::<><>::
+False 3d.ttf::FontFile::2039455306475936786::1706967817::1729257202::1::::<><>::
+main_theme.tres::Theme::849395282927925500::1706967817::0::1::::<><>::uid://bhdixdiaii504::::res://scenes/GUI/main_skin/Melbourne_bold.otf
+Melbourne_bold.otf::FontFile::2884462701562977831::1706967817::1729257202::1::::<><>::
+Rectangle-New-Resize-copy-e1597367317576.png::CompressedTexture2D::9103284445536517239::1706967817::1729257204::1::::<><>::
+::res://scenes/levels/::1729442617
+18756869098_92ca86ff79_b.jpg::CompressedTexture2D::5718229549348163908::1706967817::1729257204::1::::<><>::
+level_base.gd::GDScript::-1::1706967817::0::1::::<>Node2D<>::
+level_base.tscn::PackedScene::4565042297812833145::1729442617::0::1::::<><>::res://scenes/levels/level_base.gd<>uid://cjgy3i8agdgn2::::res://graphics/tilemaps/city/city.tres<>uid://byc3q31dfxkfl::::res://scenes/player/player.tscn<>uid://mdopbnrtajdc::::res://scenes/enemies/child_enemy/child_enemy.tscn<>uid://dit5w5w4jygsn::::res://scenes/enemies/pigeon/pigeon.tscn<>uid://mkfqrm438dw1::::res://scenes/enemies/seagull/seagull.tscn<>uid://bdy2oabwtmogw::::res://scenes/lunch/lunch.tscn<>uid://dsubgwle1qnp0::::res://scenes/crumbs/crumb_thrower.tscn<>uid://bf0yusii3k8qo::::res://scenes/GUI/game_ui.tscn<>uid://o4h0mxrrv31::::res://scenes/PictureTaker/picture_taker.tscn<>uid://b5euyn72511u2::::res://audio/Mastodon - Blood And Thunder.mp3<>uid://56om27nhd85w::::res://resources/player_stats.tres<>uid://ds7csor0ms35o::::res://scenes/GUI/tutorial_screen.tscn<>uid://b2l66svymsbhn::::res://scenes/GUI/game_over_screen.tscn<>uid://crehoe4n02ndv::::res://audio/Silver Gull.mp3
+::res://scenes/lunch/::1729442617
+lunch.gd::GDScript::-1::1706967817::0::1::::<>Node2D<>::
+lunch.tscn::PackedScene::2648196643194258090::1729442617::0::1::::<><>::res://scenes/lunch/lunch.gd
+::res://scenes/PictureTaker/::1729442617
+picture_taker.gd::GDScript::-1::1706967817::0::1::::<>Area2D<>::
+picture_taker.tscn::PackedScene::30675914594231070::1729442617::0::1::::<><>::res://scenes/PictureTaker/picture_taker.gd<>uid://cw20gxwmi8jhx::::res://resources/album.tres
+::res://scenes/player/::1729442617
+CameraFlash.gd::GDScript::-1::1706967817::0::1::::<>Polygon2D<>::
+dg2kcv3-c10a0bcc-f58a-488d-ba93-6fc6ec166b02.png::CompressedTexture2D::6662338968291663292::1706967817::1729257205::1::::<><>::
+player.gd::GDScript::-1::1706967817::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::4076811845976559685::1729442617::0::1::::<><>::res://scenes/player/player.gd<>uid://56om27nhd85w::::res://resources/player_stats.tres<>uid://c16j0qlrornq7::::res://scenes/player/dg2kcv3-c10a0bcc-f58a-488d-ba93-6fc6ec166b02.png<>uid://dqyx6cx2u30jw::::res://scenes/player/JuliusSprite/sprite_00.png<>uid://bwa3aikuk1q14::::res://scenes/player/JuliusSprite/sprite_08.png<>res://scenes/player/CameraFlash.gd<>uid://ducrh6wpipltx::::res://scenes/player/JuliusSprite/sprite_04.png<>uid://bawpgksmpsk86::::res://scenes/player/JuliusSprite/sprite_12.png<>uid://cchajdiartdqs::::res://scenes/player/JuliusSprite/sprite_01.png<>uid://ccvmpl7jsm6jf::::res://scenes/player/JuliusSprite/sprite_02.png<>uid://c30bddlad75ij::::res://scenes/player/JuliusSprite/sprite_03.png<>uid://bmdi8yjnwh161::::res://scenes/player/JuliusSprite/sprite_09.png<>uid://xtrv7w2ueuut::::res://scenes/player/JuliusSprite/sprite_10.png<>uid://lqnujc62n5lb::::res://scenes/player/JuliusSprite/sprite_11.png<>uid://bvq5b6y228qx1::::res://scenes/player/JuliusSprite/sprite_05.png<>uid://befdxqmbig4lg::::res://scenes/player/JuliusSprite/sprite_06.png<>uid://dd37vfr08kcxu::::res://scenes/player/JuliusSprite/sprite_07.png<>uid://c0axqhcgvgbgt::::res://scenes/player/JuliusSprite/sprite_13.png<>uid://xwkgy668nxdg::::res://scenes/player/JuliusSprite/sprite_14.png<>uid://cx7cbbtld2gb::::res://scenes/player/JuliusSprite/sprite_15.png
+::res://scenes/player/JuliusSprite/::1729257204
+sprite_00.png::CompressedTexture2D::8333280607661751148::1706967817::1729257203::1::::<><>::
+sprite_01.png::CompressedTexture2D::4927685941037783654::1706967817::1729257203::1::::<><>::
+sprite_02.png::CompressedTexture2D::4957327005943366739::1706967817::1729257203::1::::<><>::
+sprite_03.png::CompressedTexture2D::6789804682045285121::1706967817::1729257204::1::::<><>::
+sprite_04.png::CompressedTexture2D::8568214031684811169::1706967817::1729257204::1::::<><>::
+sprite_05.png::CompressedTexture2D::3895241406296950656::1706967817::1729257204::1::::<><>::
+sprite_06.png::CompressedTexture2D::2677722030221292608::1706967817::1729257204::1::::<><>::
+sprite_07.png::CompressedTexture2D::7429611894606410346::1706967817::1729257204::1::::<><>::
+sprite_08.png::CompressedTexture2D::3932275756085232961::1706967817::1729257204::1::::<><>::
+sprite_09.png::CompressedTexture2D::3235425882836671640::1706967817::1729257204::1::::<><>::
+sprite_10.png::CompressedTexture2D::1654637987537479243::1706967817::1729257204::1::::<><>::
+sprite_11.png::CompressedTexture2D::805932838112259943::1706967817::1729257204::1::::<><>::
+sprite_12.png::CompressedTexture2D::2432759017543313705::1706967817::1729257204::1::::<><>::
+sprite_13.png::CompressedTexture2D::6528987892927091363::1706967817::1729257204::1::::<><>::
+sprite_14.png::CompressedTexture2D::1660378908857629152::1706967817::1729257204::1::::<><>::
+sprite_15.png::CompressedTexture2D::189804945922052897::1706967817::1729257204::1::::<><>::
+::res://themes/::1706967817
+new_style_box_flat.tres::StyleBoxFlat::1625876918176820754::1706967817::0::1::::<><>::
+::res://VFX_Stuff/::1706967817
+new_noise_texture_2d.tres::NoiseTexture2D::904890660234752218::1706967817::0::1::::<><>::
+new_shader.gdshader::Shader::-1::1706967817::0::1::::<><>::
+vfx.tscn::PackedScene::4059074292142098421::1706967817::0::1::::<><>::res://VFX_Stuff/new_shader.gdshader<>uid://m5logargyfpi::::res://VFX_Stuff/new_noise_texture_2d.tres<>uid://bba24imwcqw6x::::res://icon.svg

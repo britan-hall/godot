@@ -1,0 +1,9 @@
+res://scenes/GUI/main_menu.tscn
+res://graphics/tilemaps/city/city.tres
+res://scenes/levels/level_base.tscn
+res://scenes/lunch/lunch.tscn
+res://scenes/PictureTaker/picture_taker.tscn
+res://scenes/player/player.tscn
+res://scenes/GUI/game_over_screen.tscn
+res://autoloads/global_signals.tscn
+res://scenes/GUI/game_ui.tscn
